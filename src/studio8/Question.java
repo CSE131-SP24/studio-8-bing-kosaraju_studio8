@@ -17,6 +17,7 @@ public class Question {
 	
 	public int checkAnswer(String givenAnswer) {
 		if(answer.equals(givenAnswer)) { //String comparison
+			System.out.println("we are at check answer");
 			return this.points;
 		} else {
 			return 0;
@@ -34,7 +35,6 @@ public class Question {
 	public static void main(String[] args) {
 		Question q = new Question("What number studio is this?", "8", 2);
 		q.displayPrompt();
-		System.out.println(q.checkAnswer("hi"));
 		System.out.println(q.checkAnswer("8"));
 	}
 }
